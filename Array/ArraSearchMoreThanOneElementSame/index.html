@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Special Search</title>
+    <script>
+        let arr = [3,4,6,3,9,12]
+        let flag = undefined;
+        console.log(arr);
+        for(let i=0;i<arr.length;i++) {
+            // console.log(arr[i])
+            for(let j = i+1;j <arr.length;j++) {
+                // console.log(arr[j])
+                if(arr[i] == arr[j]) {
+                    console.log(`Two elements are same. And their index is ${i} and ${j}`);
+                    break;
+                    flag = i;
+                }
+                // console.log(flag)
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

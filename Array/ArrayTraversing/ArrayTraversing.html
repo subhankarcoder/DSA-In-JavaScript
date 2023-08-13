@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Traversing</title>
+    <script>
+        //Traversing Data of an array
+        let arr = [1,23,45,6,89,90,87,34,65,78,45];
+        for(let i=0;i< arr.length; i++) {
+            document.write(`${arr[i]} <br>`)
+        }
+        //Now accessing data with user input
+        function ElementCheck() {
+            let value = document.getElementById('element').value;
+            //If the user give negative value the array position will start from end, i.e arr[0,1,2,3,4] here value = -1 means arr[4]
+            let length_reverse = (arr.length + parseInt(value));
+            //Checking the logic
+            console.log(length_reverse);
+            if(value < arr.length && typeof parseInt(value) === "number" && value >= 0)
+            {
+                alert(`The value is ${arr[value]}`)
+            }else if(value < 0) {
+                alert(`The value is ${arr[length_reverse]}`)
+
+            }else {
+                alert("Please enter valid value :(")
+            }
+            //END of code
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="element">
+    <button onclick="ElementCheck()">Click</button>
+</body>
+</html>

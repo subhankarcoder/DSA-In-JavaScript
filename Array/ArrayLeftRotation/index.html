@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array left rotation</title>
+  </head>
+  <body>
+    <script>
+      function shiftArrayLeft(arr, places) {
+        const shiftedArray = [];
+        const length = arr.length;
+
+        for (let i = 0; i < length; i++) {
+          const newIndex = (i + places);
+          shiftedArray[newIndex] = arr[i];
+        }
+
+        return shiftedArray;
+      }
+
+      let arr = [1, 2, 3, 5, 8];
+      let shifted = shiftArrayLeft(arr, 2);
+
+      console.log(arr);
+      console.log(shifted);
+    </script>
+  </body>
+</html>

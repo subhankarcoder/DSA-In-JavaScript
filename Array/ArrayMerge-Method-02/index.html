@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Merge 02</title>
+    <script>
+        let arr1 = [3,5,7,56,90]
+        let arr2 = [4,6,12]
+        let arr3 = []
+        // console.log(arr3)
+        let d1=0,d2=0,d3=0
+        while(d1 <arr1.length && d2<arr2.length) {
+            if(arr1[d1] < arr2[d2]) {
+                arr3[d3] = arr1[d1]
+                d1++
+            }else {
+                arr3[d3] = arr2[d2]
+                d2++
+            }
+            d3++
+        }
+        console.log(d1,d2)
+        while(d1 < arr1.length) {
+            arr3[d3] = arr1[d1]
+            d1++;
+            d3++;
+        }
+        console.log(arr3)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

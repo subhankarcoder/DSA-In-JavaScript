@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear Search In Array</title>
+    <script>
+      let arr = [3, 4, 15, 10, 5];
+      let index = undefined;
+      function search() {
+          let element = document.getElementById('element').value;
+          console.log(element)
+              for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == element) {
+                  index = i;
+                  console.log(index)
+                  alert(`Searched element is in the array and it's index is ${index}`);
+                  break;
+                }else{
+                  index = undefined
+                }
+              }
+              if(index==undefined) {
+                alert("The searched element is not in the array")
+              }
+              // console.log(index)
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="element" placeholder="Enter value to search" />
+    <button onclick="search()">Search</button>
+  </body>
+</html>
