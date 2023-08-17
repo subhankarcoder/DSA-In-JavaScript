@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indirect Recursion</title>
+    <script>
+      let numOfApple = 0;
+      let money = 100;
+
+      function MoneyCount(x) {
+        if(x>0) {
+            console.log("Money left: ", x, "Apple bought: ", numOfApple);
+            numOfApple++;
+            AppleCount(x);
+        }else {
+            console.log("No money left :(, Total Apples bought: ",numOfApple);
+        }
+      }
+      function AppleCount(x) {
+        MoneyCount(x-10);
+      }
+      MoneyCount(money);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [];
+        let stackLimit = 5;
+        let index = 0;
+        function push(num) {
+            if(arr.length < stackLimit) {
+                arr[index] = num;
+                index++
+            }else {
+                alert("Stack is full");
+            }
+        }
+        function pop() {
+            if(arr.length >0) {
+                arr.length = arr.length - 1;
+            }else {
+                alert("Stack is empty");
+            }
+        }
+        push(5)
+        push(7)
+        push(9)
+        push(10)
+        push(12)
+        pop()
+        pop()
+        pop()
+        pop()
+        pop()
+        console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
