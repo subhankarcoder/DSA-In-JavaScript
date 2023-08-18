@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String</title>
+    <script>
+        let arr = []
+        function push(newValue) {
+            arr[arr.length] = newValue
+        }
+        function pop() {
+            reverseVal = arr[arr.length-1]
+            arr.length--
+            return reverseVal
+        }
+        function reverseArry(item) {
+            let normalStr = item.join("")
+            console.log(normalStr)
+            for(let i=0;i < item.length ;i++) {
+                push(item[i])
+            }
+            for(let i=0; i< item.length; i++) {
+                item[i]=pop()
+            }
+            let reverseStr = item.join("")
+            // console.log(item)
+            console.log(reverseStr)
+            if(normalStr.normalize() === reverseStr.normalize()) {
+                console.log("palindrome")
+            }else {
+                console.log("Not pallindrome");
+            }
+            
+        }
+        let str= 'madam'
+        let strArr = str.split("");
+        reverseArry(strArr)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
