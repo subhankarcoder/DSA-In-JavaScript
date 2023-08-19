@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search two arrays</title>
+    <script>
+      let arrForSearch = ["ab","ab",'abc', "ab", "abc"];
+      let searchElements = ["ab", "abc", "xyz"];
+      let result = [];
+
+      function check(arrFS, searchEl) {
+        for (let i = 0; i < searchEl.length; i++) {
+          let flag = 0; // Reset flag for each element in arrFS
+          for (let j = 0; j < arrFS.length; j++) {
+            if (arrFS[j].normalize() === searchEl[i].normalize()) {
+              flag++;
+            }
+          }
+          result.push(flag); // Push the count into the result array
+        }
+      }
+
+      check(arrForSearch, searchElements);
+      console.log(result); // Output: [2, 1, 0]
+    </script>
+  </head>
+  <body></body>
+</html>
